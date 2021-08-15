@@ -1,19 +1,22 @@
 import { Composition } from 'remotion';
-import { Article } from './Articles';
+import { Articles } from './Articles';
+
+let articles = [
+	{ title: 'article 1', content: 'content 1' },
+	{ title: 'article 2', content: 'content 2' },
+	{ title: 'article 3', content: 'content 3' },
+];
 
 export const RemotionVideo: React.FC = () => {
 	return (
 		<Composition
-			id="Article"
-			component={Article}
-			durationInFrames={150}
+			id="Articles"
+			component={Articles}
+			durationInFrames={900}
 			fps={30}
 			width={720}
 			height={1280}
-			defaultProps={{
-				titleText: 'Article Title',
-				titleColor: 'black',
-			}}
+			defaultProps={{ articles }}
 		/>
 	);
 };

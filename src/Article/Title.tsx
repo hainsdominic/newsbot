@@ -2,8 +2,7 @@ import { spring, useCurrentFrame, useVideoConfig } from 'remotion';
 
 export const Title: React.FC<{
 	titleText: string;
-	titleColor: string;
-}> = ({ titleText, titleColor }) => {
+}> = ({ titleText }) => {
 	const videoConfig = useVideoConfig();
 	const frame = useCurrentFrame();
 	const text = titleText.split(' ').map((t) => ` ${t} `);
@@ -22,7 +21,7 @@ export const Title: React.FC<{
 					<span
 						key={t}
 						style={{
-							color: titleColor,
+							color: 'black',
 							marginLeft: 10,
 							marginRight: 10,
 							transform: `scale(${spring({
