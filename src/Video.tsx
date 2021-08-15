@@ -1,11 +1,6 @@
 import { Composition } from 'remotion';
+import { fetchArticles } from '../fetchArticles';
 import { Articles } from './Articles';
-
-let articles = [
-	{ title: 'article 1', content: 'content 1' },
-	{ title: 'article 2', content: 'content 2' },
-	{ title: 'article 3', content: 'content 3' },
-];
 
 export const RemotionVideo: React.FC = () => {
 	return (
@@ -16,7 +11,7 @@ export const RemotionVideo: React.FC = () => {
 			fps={30}
 			width={720}
 			height={1280}
-			defaultProps={{ articles }}
+			defaultProps={fetchArticles()}
 		/>
 	);
 };

@@ -10,14 +10,15 @@ export const Content: React.FC<{
 			style={{
 				fontFamily: 'Helvetica, Arial',
 				fontSize: 40,
-				textAlign: 'center',
+				textAlign: 'justify',
 				position: 'absolute',
-				top: 230,
-				width: '100%',
+				top: 400,
+				display: 'flex',
+				justifyContent: 'center',
 				opacity,
 			}}
 		>
-			{contentText}
+			<p style={{ width: '90%' }}>{contentText}</p>
 		</div>
 	);
 };

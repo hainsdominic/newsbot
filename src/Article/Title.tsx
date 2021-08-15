@@ -11,7 +11,7 @@ export const Title: React.FC<{
 			style={{
 				fontFamily: 'SF Pro Text, Helvetica, Arial',
 				fontWeight: 'bold',
-				fontSize: 100,
+				fontSize: 50,
 				textAlign: 'center',
 				width: '100%',
 			}}

@@ -10,18 +10,13 @@ export const Articles: React.FC<{
 
 	return (
 		<div style={{ flex: 1, backgroundColor: 'white' }}>
-			{/* Couldn't iterate over the the array */}
-			<Article article={articles[0]} startFrame={0} duration={300} />;
-			<Article
-				article={articles[1]}
-				startFrame={videoConfig.durationInFrames / 3}
-				duration={300}
-			/>
-			<Article
-				article={articles[2]}
-				startFrame={(videoConfig.durationInFrames / 3) * 2}
-				duration={300}
-			/>
+			{articles.map((article, idx) => (
+				<Article
+					article={article}
+					startFrame={(videoConfig.durationInFrames / 3) * idx}
+					duration={300}
+				/>
+			))}
 			<Audio src={music} />
 		</div>
 	);
