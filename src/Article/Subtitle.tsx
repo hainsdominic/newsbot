@@ -1,5 +1,5 @@
-import {interpolate, useCurrentFrame} from 'remotion';
-import {COLOR_1} from './config';
+import { interpolate, useCurrentFrame } from 'remotion';
+import { COLOR_1 } from './config';
 
 export const Subtitle: React.FC = () => {
 	const frame = useCurrentFrame();
