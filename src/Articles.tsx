@@ -1,6 +1,6 @@
 import { Audio, useCurrentFrame, useVideoConfig } from 'remotion';
-import music from '../assets/music.mp3';
 import { Article } from './Article';
+import music from './assets/music.mp3';
 
 export const Articles: React.FC<{
 	articles: { title: string; content: string }[];
